@@ -1,9 +1,9 @@
 #include <cstdio>
-#include<GL/gl.h>
-#include <windows.h>
+#include <GL/gl.h>
 #include <iostream>
 #include <GL/glut.h>
 #include <math.h>
+#include <windows.h>
 using namespace std;
 /*
 17-34753-2	Hasan, Md Hasibul
@@ -12,9 +12,11 @@ using namespace std;
 17-34717-2	Ferdous, Jannatul
 */
 
-int sunstatus=0,cloudstatus=0,waterstatus=0,cyclestatus=1,human2status=1,rainstatus=0,birdstatus=1,start=0;
+int sunstatus=0,cloudstatus=1,waterstatus=1,cyclestatus=1,human2status=1,rainstatus=0,birdstatus=1,start=0;
 float sunX=0,sunY=0,cloudX=0,cloudY=0,waterX=0,waterY=0,cycleX=0,cycleY=0,humanX=0,humanY=0,rainX=0,rainY=0,birdsX=0,birdsY=0;
 int day=1;
+
+
 //////draw circle starts//////
  void DrawCircle(float cx, float cy, float r, int num_segments)
  {
@@ -41,10 +43,10 @@ void movesun(int x)
     {
             sunX -= 1.5;
             sunY += 0.5;
-
     }
         if(sunX<=-700)
         {
+            day=0;
             sunX=300;
             sunY=-100;
         }
@@ -166,6 +168,7 @@ void hills(int x,int y,int z)
     glFlush();
 }
 //////////
+
 ////////move clouds///
 
 void movecloud()
@@ -1318,7 +1321,6 @@ void human2()
    glEnd();
 }
 //////////////human 2 ends/////////////
-/////////////rain starts//////////////
 void Rain(int x)
 {
 
@@ -1336,6 +1338,7 @@ if(rainstatus==1){
         glVertex2d(x,y);
         glVertex2d(x+5,y+5);
         glEnd();
+
     }
 
 	glutPostRedisplay();

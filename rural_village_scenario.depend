@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1586496860 source:c:\users\hasib\onedrive\desktop\code cg\rural_village_scenario\main.cpp
+1588265119 source:c:\users\hasib\onedrive\desktop\code cg\rural_village_scenario\main.cpp
 	<cstdio>
 	<GL/gl.h>
-	<windows.h>
 	<iostream>
 	<GL/glut.h>
 	<math.h>
+	<windows.h>
 
 1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
 
